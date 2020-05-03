@@ -1,11 +1,12 @@
-fetch("./pages/header.html")
+function include(page, selecter){
+fetch(page)
   .then(response => {
     return response.text()
   })
   .then(data => {
-    document.querySelector("header").innerHTML = data;
+    document.querySelector(selecter).innerHTML = data;
   });
-
+}
 
 
 //function includeHTML() {
