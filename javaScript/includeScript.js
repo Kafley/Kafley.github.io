@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     console.log( "ready!" );
-    document.getElementById("randomSwLetter").innerHTML="hello world";
+    document.getElementById("randomByLetter").innerHTML="hello world";
 });
 
 function include(page, selecter){
