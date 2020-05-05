@@ -1,3 +1,8 @@
+$( document ).ready(function() {
+    console.log( "ready!" );
+    document.getElementById("randomSwLetter").innerHTML="hello world";
+});
+
 function include(page, selecter){
 fetch(page)
   .then(response => {
