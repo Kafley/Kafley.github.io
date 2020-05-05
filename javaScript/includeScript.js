@@ -57,8 +57,8 @@ function swrlettClick(){
 }
 function byalettClick(){
 	var y = Math.floor(Math.random()*36);
-	bya.innerHTML=byBarna[y];
-	
+	 console.log(byBarna[y] ++ " this is byanjan barna that is comming from javascript.");
+	bya.innerHTML=byBarna[y];	
 }
 function swr4Click(){
 	while (swar4.firstChild) {
