@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://Kafley.github.io/cssFiles/mainStyle.css">
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -30,7 +31,7 @@
 
 <div class="jumbotron" style="height:400px; overflow:hidden">
   <div class="flex-container text-center">
-    <img src="https://Kafley.github.io/Images/Naniharu.jpg" class="img-responsive" style="width:100%; overflow:hidden;" alt="Image">
+    <img src="https://Kafley.github.io/Images/blueTruckleft.jpg" class="img-responsive" style="width:100%; overflow:hidden;" alt="Image">
   </div>
 </div>
   
@@ -41,11 +42,11 @@
     </div>
     <div class="col-sm-5"> 
       <p>Some text..</p>
-      <img src="Images/truck icon.png" class="img-responsive" style="width:100%" alt="Image">
+      <img src="Images/Naniharu.jpg" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-5"> 
       <p>Some text..</p>
-      <img src="https://Kafley.github.io/Images/blueTruckright.jpeg" class="img-responsive" style="width:100%" alt="Image">
+      <img src="https://Kafley.github.io/Images/Naniharu.jpg" class="img-responsive" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-1">
     </div>
@@ -57,9 +58,32 @@
   <div class="row">
   <div class="col-sm-1"> 
     </div>
-    <div class="col-sm-5"> 
-      <div class="display-3" id="randomByLetter"></div>
-      <button onclick="byalettClick()">get a byanjan barna</button>
+    <div class="col-sm-5">
+    	<div class="row">
+    		<div class="col-sm-5">
+      		 <h1 class="display-3" id="randomByLetter"></h1>
+      		 <button onclick="byalettClick()">byanjan barna</button>
+      		</div>
+      		<div class="col-sm-5">
+      		 <h1 class="display-3" id="randomSwLetter"></h1>
+      		 <button onclick="swrlettClick()">swar barna</button>
+      		</div>
+     	 </div><br><br>
+     	 <div class="row">
+    		<div class="col-sm-5">
+      		 <table class="table table-bordered display-2">
+      		 	<thead class="thead-dark">Byanjan barna</thead>
+      		 	<tr><td><h3 class="text-danger font-bolder">क</h3></td><td><h3 class="text-danger font-bolder">ख</h3></td><td><h3 class="text-danger font-bolder">ग</h3></td><td><h3 class="text-danger font-bolder">घ</h3></td><td><h3 class="text-danger font-bolder">ङ</h3></td></tr>
+      		 	<tr><td><h3 class="text-danger font-bolder">च</h3></td><td><h3 class="text-danger font-bolder">छ</h3></td><td><h3 class="text-danger font-bolder">ज</h3></td><td><h3 class="text-danger font-bolder">झ</h3></td><td><h3 class="text-danger font-bolder">ञ</h3></td></tr>
+      		 	<tr><td><h3 class="text-danger font-bolder">ट</h3></td><td><h3 class="text-danger font-bolder">ठ</h3></td><td><h3 class="text-danger font-bolder">ड</h3></td><td><h3 class="text-danger font-bolder">ढ</h3></td><td><h3 class="text-danger font-bolder">ण</h3></td></tr>
+      		 	<tr><td><h3 class="text-danger font-bolder">त</h3></td><td><h3 class="text-danger font-bolder">थ</h3></td><td><h3 class="text-danger font-bolder">द</h3></td><td><h3 class="text-danger font-bolder">ध</h3></td><td><h3 class="text-danger font-bolder">न</h3></td></tr>
+      		 	<tr><td><h3 class="text-danger font-bolder">प</h3></td><td><h3 class="text-danger font-bolder">फ</h3></td><td><h3 class="text-danger font-bolder">ब</h3></td><td><h3 class="text-danger font-bolder">भ</h3></td><td><h3 class="text-danger font-bolder">म</h3></td></tr>
+      		 	<tr><td><h3 class="text-danger font-bolder">य</h3></td><td><h3 class="text-danger font-bolder">र</h3></td><td><h3 class="text-danger font-bolder">ल</h3></td><td><h3 class="text-danger font-bolder">व</h3></td><td><h3 class="text-danger font-bolder">श</h3></td></tr>
+      		 	<tr><td><h3 class="text-danger font-bolder">ष</h3></td><td><h3 class="text-danger font-bolder">स</h3></td><td><h3 class="text-danger font-bolder">ह</h3></td><td><h3 class="text-danger font-bolder">क्ष</h3></td><td><h3 class="text-danger font-bolder">त्र</h3></td></tr>
+      		 	<tr><td><h3 class="text-danger font-bolder">ज्ञ</h3></td></tr>
+      		 </table>
+      		</div>
+      	</div>
       <!-- <script type="text/javascript">byalettClick();</script> -->
     </div>
     <div class="col-sm-5"> 
@@ -77,5 +101,8 @@
 
 </body>
 <script type="text/javascript" src="javaScript/includeScript.js"></script>
-<script type="text/javascript">byalettClick();</script>
+<script type="text/javascript">
+byalettClick();
+swrlettClick();
+</script>
 </html>
