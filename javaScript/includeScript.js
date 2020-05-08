@@ -1,8 +1,3 @@
-$( document ).ready(function() {
-    console.log( "ready!" );
-    document.getElementById("randomByLetter").innerHTML="hello world";
-});
-
 function include(page, selecter){
 fetch(page)
   .then(response => {
@@ -58,7 +53,9 @@ function swrlettClick(){
 function byalettClick(){
 	var y = Math.floor(Math.random()*36);
 	 console.log(byBarna[y] + " this is byanjan barna that is comming from javascript.");
-	bya.innerHTML=byBarna[y];	
+	 console.log(document.getElementById("randomByLetter").innerHTML);
+	 console.log(bya.innerHTML);
+	 bya.innerHTML = byBarna[y];	
 }
 function swr4Click(){
 	while (swar4.firstChild) {
