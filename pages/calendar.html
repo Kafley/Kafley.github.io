@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Nepali</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://Kafley.github.io/cssFiles/calendar.css">
+</head>
+<body>
+	<div class="container p-2">
+		<div class="justify-content-center p-2" id="wrapper">
+			<fieldset class=" text-center calender-fields">
+				<legend>Calendar</legend>
+					<div class="calendar-table">
+						<div class="row d-flex justify-content-center">
+							<div class="form-inline">
+								<div class="form-group">
+									  <input type="submit" onclick = "previous()" class="form-control mr-sm-2" id="previous" value="<">
+									  <label id="month-year-label" class="form-control"><h3 id="month-year" class="mb-4 text-success"></h3></label>
+									  <input type= "submit" onclick = "next()" class=" form-control ml-2 mr-sm-2" value=">" id="next"/>
+							  	</div>
+							</div>
+						</div>
+						<table class="table table-bordered calender-header">
+						<thead class="thead">
+						<tr>
+						<td>Sun</td>
+						<td>Mon</td>
+						<td>Tue</td>
+						<td>Wed</td>
+						<td>Thu</td>
+						<td>Fri</td>
+						<td>sat</td>
+						</tr>
+						</thead>
+						<tbody class="tbody calendar-Body" id="tbody">
+						</tbody>
+						</table>
+					</div>
+					<div class="row d-flex justify-content-center">
+							<div class="form-inline controls">
+								<div class="form-group">
+									  <input type="text" class="form-control mr-sm-2" id="jump-month" value="month">
+									  <input type="text" id="jump-year" class="form-control" value="year">
+									  <input type= "submit" onclick="goTo()" class=" form-control mr-sm-2" value="jump" id="jump"/>
+							  	</div>
+							</div>
+					</div>
+					<div class="row d-flex justify-content-center">
+							<div class="form-inline mt-2 controls">
+									<div class="form-group mt-2">
+										  <input type="text" class="form-control mr-sm-2" id="event-date" value="yyyy-mm-dd">
+										  <textArea  id="event" class="form-control"></textArea>
+										  <input type= "submit" class=" form-control mr-sm-2" value="submit" id="eventsubmit"/>
+								  	</div>
+							</div>
+					</div>
+			</fieldset>
+		</div>
+	</div>
+
+<script type="text/javascript" src="https://Kafley.github.io/javaScript/calendar.js"></script>
+</body>
+</html>

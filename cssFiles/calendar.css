@@ -1,0 +1,15 @@
+legend{
+	border: double blue;
+	color:green;
+	background-color:#eeeeee;
+}
+#wrapper{
+	border: double #222a5e;
+}
+.container{
+	width:40%;
+}
+.controls{
+	border: double #325c3a;
+	padding:2px;
+}
