@@ -1,0 +1,71 @@
+/* 
+Developed by Arnaldo Perez Castano
+arnaldo.skywalker@gmail.com
+*/
+
+.container {
+   width:1024px;
+   margin-left: auto;
+   margin-right: auto;
+   min-height:490px;
+}
+
+#panel {
+   width:100%;
+   background-color: rgb(180,180,180);
+   min-height:1000px;
+   color:white;
+   font-weight: bold;
+   padding:5px;
+   font-family: Arial;
+}
+
+.grid-container {
+   float: left;
+   width:620px;
+   height:660px;
+   text-align: center;
+   width:50%;
+}
+
+.grid-container h2 {
+   font-family: Tahoma;
+}
+.grid {
+   background-color: #eee;
+   border: solid 4px #75e675249900;
+   width:220px;
+   height:220px;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 3px;
+   box-shadow: 5px 5px #d58dd8, 5px 5px #d58dd8;
+   overflow: auto;
+}
+
+.row {
+   height:32.3%;
+}
+
+.cell {
+   width:31.3%;
+   height:100%;
+   float: left;
+   margin-left: auto;
+   text-align: center;
+   font-size:150%;
+   font-family: Arial;
+   font-weight: bold;
+   position:relative;
+   border-radius: 10px;
+   border: solid 1px #75e675;
+}
+
+.cell:hover {
+   background-color: #ddd1dc;
+}
+
+.cell span {
+   display: block;
+   transform: translateY(70%);
+}

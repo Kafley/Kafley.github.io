@@ -1,0 +1,51 @@
+canvas {
+  border: 1px solid black;
+  width: 560px;
+  height: 360px;
+}
+td {
+width:5px;
+}
+.rounded-circle{
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.table{
+	width:590px;
+}
+.pink{
+	background-color:pink;
+	border: 1px solid black;
+}
+.blue{
+	background-color:blue;
+	border: 1px solid black;
+}
+.red{
+	background-color:red;
+	border: 1px solid black;
+}
+.black{
+	background-color:black;
+	border: 1px solid black;
+}
+.orange{
+	background-color:orange;
+	border: 1px solid black;
+}
+.purple{
+	background-color:purple
+	border: 1px solid black;
+}
+.white{
+	background-color:white;
+	border: 1px solid black;
+	
+}
+.gray{
+	background-color:gray;
+	border: 1px solid black;
+}
