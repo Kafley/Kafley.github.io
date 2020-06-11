@@ -51,7 +51,7 @@ window.addEventListener('mouseup', e => {
   }
 });
 
-document.body.addEventListener("touchstart", e => {
+window.addEventListener("touchstart", e => {
 	  if (e.target == drawBoard) {
 	    e.preventDefault();
 	  }
@@ -60,7 +60,7 @@ document.body.addEventListener("touchstart", e => {
 	  y = e.offsetY;
 	  isDrawing = true;
 	});
-document.body.addEventListener("touchmove", e => {
+window.addEventListener("touchmove", e => {
 	  
 	  if (isDrawing === true) {
 		  if (e.target == drawBoard) {
@@ -71,7 +71,7 @@ document.body.addEventListener("touchmove", e => {
 		  y = e.offsetY;
 	  }
 	});
-document.body.addEventListener("touchend", e => {
+window.addEventListener("touchend", e => {
 	  if (e.target == drawBoard) {
 		  e.preventDefault();
 		}
