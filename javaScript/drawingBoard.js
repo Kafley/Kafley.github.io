@@ -51,7 +51,7 @@ window.addEventListener('mouseup', e => {
   }
 });
 
-window.addEventListener("touchstart", e => {
+window.addEventListener("touchstart", function(e) {
 	  if (e.target == drawBoard) {
 	    e.preventDefault();
 	  }
@@ -59,8 +59,8 @@ window.addEventListener("touchstart", e => {
 	  x = e.offsetX;
 	  y = e.offsetY;
 	  isDrawing = true;
-	});
-window.addEventListener("touchmove", e => {
+	}, false);
+window.addEventListener('touchmove', function(e) {
 	  
 	  if (isDrawing === true) {
 		  if (e.target == drawBoard) {
@@ -70,8 +70,8 @@ window.addEventListener("touchmove", e => {
 		  x = e.offsetX;
 		  y = e.offsetY;
 	  }
-	});
-window.addEventListener("touchend", e => {
+	}, false);
+window.addEventListener("touchend", function(e) {
 	  if (e.target == drawBoard) {
 		  e.preventDefault();
 		}
@@ -82,7 +82,7 @@ window.addEventListener("touchend", e => {
 		y = 0;
 		isDrawing = false;
 	  }
-	});
+	} ,false);
 window.addEventListener('resize', resizeCanvas, false);
 
 function resizeCanvas() {
