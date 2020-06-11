@@ -52,32 +52,32 @@ window.addEventListener('mouseup', e => {
 });
 
 window.addEventListener("touchstart", function(e) {
-	  if (e.target == drawBoard) {
-	    e.preventDefault();
+	  if (e.touches[0].target == drawBoard) {
+	    e.touches[0].preventDefault();
 	  }
 	  
-	  x = e.offsetX;
-	  y = e.offsetY;
+	  x = e.touches[0].offsetX;
+	  y = e.touches[0].offsetY;
 	  isDrawing = true;
 	}, false);
 window.addEventListener('touchmove', function(e) {
 	  
 	  if (isDrawing === true) {
-		  if (e.target == drawBoard) {
-			    e.preventDefault();
+		  if (e.touches[0].target == drawBoard) {
+			    e.touches[0].preventDefault();
 			  }
-		  drawLine(context, x, y, e.offsetX, e.offsetY);
-		  x = e.offsetX;
-		  y = e.offsetY;
+		  drawLine(context, x, y, e.touches[0].offsetX, e.touches[0].offsetY);
+		  x = e.touches[0].offsetX;
+		  y = e.touches[0].offsetY;
 	  }
 	}, false);
 window.addEventListener("touchend", function(e) {
-	  if (e.target == drawBoard) {
-		  e.preventDefault();
+	  if (e.touches[0].target == drawBoard) {
+		  e.touches[0].preventDefault();
 		}
 	  
 	  if (isDrawing === true) {
-		    drawLine(context, x, y, e.offsetX, e.offsetY);
+		    drawLine(context, x, y, e.touches[0].offsetX, e.touches[0].offsetY);
 		x = 0;
 		y = 0;
 		isDrawing = false;
