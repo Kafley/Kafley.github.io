@@ -61,11 +61,11 @@ document.body.addEventListener("touchstart", e => {
 	  isDrawing = true;
 	});
 document.body.addEventListener("touchmove", e => {
-	  if (e.target == drawBoard) {
-	    e.preventDefault();
-	  }
 	  
 	  if (isDrawing === true) {
+		  if (e.target == drawBoard) {
+			    e.preventDefault();
+			  }
 		  drawLine(context, x, y, e.offsetX, e.offsetY);
 		  x = e.offsetX;
 		  y = e.offsetY;
