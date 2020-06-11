@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>About Nepali</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -12,25 +11,32 @@
   <link rel="stylesheet" href="../cssFiles/drawBoard.css">
 </head>
 <body>
-<div class="container pl-4">
-<h1>Drawing with mouse events</h1>
-<div class="row">
-<table class="table .table-bordered">
-<tbody>
-	<tr>
-		<td id="pink" class="bg-pink"><span class="rounded-circle pink"></span></td>
-		<td id="blue"><span  class="rounded-circle blue"></span></td>
-		<td id="red"><span class="rounded-circle red"></span></td>
-		<td id="black"><span class="rounded-circle black"></span></td>
-		<td id="orange"><span class="rounded-circle orange"></span></td>
-		<td id="purple"><span class="rounded-circle purple"></span></td>
-		<td id="white"><span class="rounded-circle white"></span></td>
-		<td id="grey"><span class="rounded-circle grey"></span></td>
-	</tr>
-</tbody>
-</table>
-</div>
-<canvas id="canvas" width="560" height="360"></canvas>
+<div class="container flex-container">
+	<h1 class="text-center">सेतो पाटी</h1>
+	<div class="row flex-row">
+	<table class="table .table-bordered">
+	<thead><tr><th></th><th></th><th></th><th>Color</th><th></th><th></th><th></th><th></th><th>Erasor</th><th>Thickness</th></tr></thead>
+	<tbody>
+		<tr>
+			<td id="pink" class="bg-pink"><span class="rounded-circle pink"></span></td>
+			<td id="blue"><span  class="rounded-circle blue"></span></td>
+			<td id="red"><span class="rounded-circle red"></span></td>
+			<td id="black"><span class="rounded-circle black"></span></td>
+			<td id="orange"><span class="rounded-circle orange"></span></td>
+			<td id="purple"><span class="rounded-circle purple"></span></td>
+			<td id="white"><span class="rounded-circle white"></span></td>
+			<td id="grey"><span class="rounded-circle grey"></span></td>
+			<td id="white"><span class="ract-circle erasor"></span></td>
+			<td>
+			<span id="thick1" class="thickness-circle thick1"></span>
+			<span id="thick2" class="thickness-circle thick2"></span>
+			<span id="thick3" class="thickness-circle  thick3"></span>
+			</td>
+		</tr>
+	</tbody>
+	</table>
+	</div>
+	<canvas id="canvas" class="canvas flex-canvas ml-0 pl-0"></canvas>
 </div>
 
 <script type="text/javascript" src="../javaScript/drawingBoard.js"></script>

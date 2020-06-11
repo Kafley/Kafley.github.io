@@ -1,24 +1,39 @@
-// When true, moving the mouse draws on the canvas
 let isDrawing = false;
 let x = 0;
 let y = 0;
 var clclass="black";
+var erasorWidth=5
+var lwidth=0;
 
-var myPics = document.getElementById("canvas");
-var context = myPics.getContext("2d");
+var drawBoard = document.getElementById("canvas");
+var context = drawBoard.getContext("2d");
+resizeCanvas()
+//var dpr = window.devicePixelRatio || 1;
 
 // event.offsetX, event.offsetY gives the (x,y) offset from the edge of the canvas.
 
+
 // Add the event listeners for mousedown, mousemove, and mouseup
-myPics.addEventListener('mousedown', e => {
+drawBoard.addEventListener('mousedown', e => {
+//	var ratio = drawBoard.width/drawBoard.height;
+	 if (e.target == drawBoard) {
+		    e.preventDefault();
+		  }
   x = e.offsetX;
   y = e.offsetY;
   isDrawing = true;
 });
 
-myPics.addEventListener('mousemove', e => {
+drawBoard.addEventListener('mousemove', e => {
+	  
+	
   if (isDrawing === true) {
+	  if (e.target == drawBoard) {
+		    e.preventDefault();
+		  }
+	  
     drawLine(context, x, y, e.offsetX, e.offsetY);
+//    var ratio = drawBoard.width/drawBoard.height;
     x = e.offsetX;
     y = e.offsetY;
   }
@@ -26,6 +41,9 @@ myPics.addEventListener('mousemove', e => {
 
 window.addEventListener('mouseup', e => {
   if (isDrawing === true) {
+	  if (e.target == drawBoard) {
+		    e.preventDefault();
+		  }
     drawLine(context, x, y, e.offsetX, e.offsetY);
     x = 0;
     y = 0;
@@ -33,10 +51,57 @@ window.addEventListener('mouseup', e => {
   }
 });
 
+document.body.addEventListener("touchstart", e => {
+	  if (e.target == drawBoard) {
+	    e.preventDefault();
+	  }
+	  
+	  x = e.offsetX;
+	  y = e.offsetY;
+	  isDrawing = true;
+	});
+document.body.addEventListener("touchmove", e => {
+	  if (e.target == drawBoard) {
+	    e.preventDefault();
+	  }
+	  
+	  if (isDrawing === true) {
+		  drawLine(context, x, y, e.offsetX, e.offsetY);
+		  x = e.offsetX;
+		  y = e.offsetY;
+	  }
+	});
+document.body.addEventListener("touchend", e => {
+	  if (e.target == drawBoard) {
+		  e.preventDefault();
+		}
+	  
+	  if (isDrawing === true) {
+		    drawLine(context, x, y, e.offsetX, e.offsetY);
+		x = 0;
+		y = 0;
+		isDrawing = false;
+	  }
+	});
+window.addEventListener('resize', resizeCanvas, false);
+
+function resizeCanvas() {
+//        canvas.width = window.innerWidth;
+//        canvas.height = window.innerHeight;
+	 canvas.style.width ='100%';
+	  canvas.style.height='100%';
+	  // ...then set the internal size to match
+	  canvas.width  = canvas.offsetWidth;
+	  canvas.height = canvas.offsetHeight;
+
+}
+
 function drawLine(context, x1, y1, x2, y2) {
+	
+	var dpr = window.devicePixelRatio || 1;
   context.beginPath();
   context.strokeStyle = clclass;
-  context.lineWidth = 1;
+  context.lineWidth = lwidth;  
   context.moveTo(x1, y1);
   context.lineTo(x2, y2);
   context.stroke();
@@ -44,11 +109,31 @@ function drawLine(context, x1, y1, x2, y2) {
 }
 $("td").click(function() {
 	   var myClass = $(this).attr("id");
-	   if(myClass!="black" && myClass!="pink"&&myClass!="red"&&myClass!="blue"&&myClass!="blue"&&myClass!="orange"&&myClass!="purple"&&myClass!="white")
+	   if(myClass!="black" && myClass!="pink"&&myClass!="red"&&myClass!="grey"&&myClass!="blue"&&myClass!="orange"&&myClass!="purple"&&myClass!="white")
 		   {
+		   if(myClass!=undefined &&myClass!="thick1"&&myClass!="thick2"&&myClass!="thick3"){
 		   clclass="black";
 		   }
+		   }
 	   else{
-	   clclass=myClass;
-	   }
+		   clclass=myClass;
+		   }
+	});
+
+$("span").click(function() {
+	   var thicknessId = $(this).attr("id");
+	   if(thicknessId=="thick1")
+		   {
+		   lwidth= 10;
+		   }
+	   else if(thicknessId=="thick2")
+		   {
+		   lwidth= 5;
+		   }
+	   else if(thicknessId=="thick3")
+		   {
+			   lwidth= 1; 
+		   }
+	   else{}
+		   
 	});
