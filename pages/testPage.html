@@ -185,6 +185,7 @@
 			// Draw to the canvas
 			function renderCanvas() {
 				if (drawing) {
+					ctx.lineWidth=15;
 					ctx.moveTo(lastPos.x, lastPos.y);
 					ctx.lineTo(mousePos.x, mousePos.y);
 					ctx.stroke();

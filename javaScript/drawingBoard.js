@@ -52,37 +52,26 @@ window.addEventListener('mouseup', e => {
 });
 
 window.addEventListener("touchstart", function(e) {
-	  if (e.touches[0].target == drawBoard) {
-	    e.touches[0].preventDefault();
-	  }
-	  
-	  x = e.touches[0].offsetX;
-	  y = e.touches[0].offsetY;
-	  isDrawing = true;
-	}, false);
+//	mousePos = getTouchPos(canvas, e);
+	var mouseEvent = new MouseEvent("mousedown", {
+		clientX: e.touches[0].clientX,
+		clientY: e.touches[0].clientY
+	});
+	canvas.dispatchEvent(mouseEvent);
+}, false);
 window.addEventListener('touchmove', function(e) {
 	  
-	  if (isDrawing === true) {
-		  if (e.touches[0].target == drawBoard) {
-			    e.touches[0].preventDefault();
-			  }
-		  drawLine(context, x, y, e.touches[0].offsetX, e.touches[0].offsetY);
-		  x = e.touches[0].offsetX;
-		  y = e.touches[0].offsetY;
-	  }
+	var mouseEvent = new MouseEvent("mousemove", {
+		clientX: e.touches[0].clientX,
+		clientY: e.touches[0].clientY
+	});
+	canvas.dispatchEvent(mouseEvent);
 	}, false);
+	
 window.addEventListener("touchend", function(e) {
-	  if (e.touches[0].target == drawBoard) {
-		  e.touches[0].preventDefault();
-		}
-	  
-	  if (isDrawing === true) {
-		    drawLine(context, x, y, e.touches[0].offsetX, e.touches[0].offsetY);
-		x = 0;
-		y = 0;
-		isDrawing = false;
-	  }
-	} ,false);
+	var mouseEvent = new MouseEvent("mouseup", {});
+	canvas.dispatchEvent(mouseEvent);
+}, false);
 window.addEventListener('resize', resizeCanvas, false);
 
 function resizeCanvas() {
