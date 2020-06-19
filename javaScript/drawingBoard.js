@@ -53,6 +53,9 @@ window.addEventListener('mouseup', e => {
 
 window.addEventListener("touchstart", function(e) {
 //	mousePos = getTouchPos(canvas, e);
+	var rect = canvasDom.getBoundingClientRect();
+		x: e.clientX - rect.left;
+		y: e.clientY - rect.top;
 	var mouseEvent = new MouseEvent("mousedown", {
 		clientX: e.touches[0].clientX,
 		clientY: e.touches[0].clientY
@@ -78,7 +81,7 @@ function resizeCanvas() {
 //        canvas.width = window.innerWidth;
 //        canvas.height = window.innerHeight;
 	 canvas.style.width ='100%';
-	  canvas.style.height='100%';
+	  canvas.style.height='600px';
 	  // ...then set the internal size to match
 	  canvas.width  = canvas.offsetWidth;
 	  canvas.height = canvas.offsetHeight;

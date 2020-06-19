@@ -21,28 +21,28 @@ width:20px;
 }
 .rounded-circle{
   height: 20px;
-  width: 100%;
+  width: 20px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
 }
 .thick1{
 	height: 20px;
- 	 width: 40%;
+ 	 width: 20px;
 	margin-top:-7px;
 	display:inline-block;
 	
 }
 .thick2{
 	height: 15px;
- 	 width: 25%;
+ 	 width: 15px;
 	margin-top:-0px;
 	display:inline-block;
 	
 }
 .thick3{
 	height: 10px;
-  	width: 15%;
+  	width: 10px;
 	margin-top:-1px;
 	display:inline-block;
 	
