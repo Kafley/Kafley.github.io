@@ -56,7 +56,7 @@ window.addEventListener("touchstart", function(e) {
 	if (e.target == drawBoard) {
 	    e.preventDefault();
 	  }
-	var rect = canvasDom.getBoundingClientRect();
+	var rect = drawBoard.getBoundingClientRect();
 		x: e.clientX - rect.left;
 		y: e.clientY - rect.top;
 	var mouseEvent = new MouseEvent("mousedown", {
@@ -77,9 +77,7 @@ window.addEventListener('touchmove', function(e) {
 	}, false);
 	
 window.addEventListener("touchend", function(e) {
-	if (e.target == drawBoard) {
-	    e.preventDefault();
-	  }
+	
 	var mouseEvent = new MouseEvent("mouseup", {});
 	canvas.dispatchEvent(mouseEvent);
 }, false);
