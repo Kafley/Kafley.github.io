@@ -1,26 +1,13 @@
-
-.container {
-   width:100%;
-   background: green;
-   margin-left: auto;
-   margin-right: auto;
-   min-height:100%;
-   postion: relative;
+.block {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgb(000, 255, 0);
+    text-align: center;
+    text-align-y: center;
 }
-
- .grid-container {
- /* background: blue; */
-   float: left;
-   height:100%;
-   width:100%;
-} 
-canvas {
-    background: white;
-   border: solid 4px green;
-   width:100%;
-   height:100%;
-   margin-left: auto;
-   margin-right: auto;
-   border-radius: 3px;
-   overflow: auto;
+#array {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 50px);
+    grid-gap: .1px;
 }
