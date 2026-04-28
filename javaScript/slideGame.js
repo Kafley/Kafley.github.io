@@ -35,7 +35,7 @@ var r=Math.abs(roemp-roselected);
 var c=Math.abs(colemp-colselected);
 console.log(r);
 console.log(c);
-if (Math.abs(r-c)==1){
+if (Math.abs(r-c)==1 && r<2 && c<2){
     [arr[index],arr[indexofempty]]=[arr[indexofempty],arr[index]]
 }
 initializeGame();
